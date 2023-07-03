@@ -7,10 +7,11 @@ lfone_cliente=[]
 lend_cliente=[]
 lemail_cliente=[]
 while True:
-    import os
-    menu=int(input("1-Registrar\n2-Excluir o cadastro de cliente\n3-Editar o cadastro\n4-Relatório\ndigite:"))
+    menu=input("1-Registrar\n2-Excluir o cadastro de cliente\n3-alteração o cadastro\n4-Relatório\n0-sair\ndigite:")
     system('cls')
     if menu==1:    
+        system("cls")
+        print("BEM VINDO AO CADASTRO DO CLIENTE")
         try: 
             cpf_cliente=(input("digite seu cpf: "))
             lcpf_cliente.append(cpf_cliente)
@@ -29,6 +30,8 @@ while True:
         except ValueError: 
             print("valor invalido...")
     if menu==2:
+            system("cls")
+            print("BEM VINDO A EXCLUSÃO DO CLIENTE")
             if cpf_cliente in lcpf_cliente:
                 index=lcpf_cliente.index(cpf_cliente)
                 lcpf_cliente[index]=[]
@@ -40,6 +43,8 @@ while True:
                 system('pause')
                 system('cls')
     if menu==3:
+       system("cls")
+       print("BEM VINDO A ALTERAÇÃO DO CLIENTE\n")
        if cpf_cliente in lcpf_cliente:
             index=lcpf_cliente.index(cpf_cliente) 
             try:
@@ -54,7 +59,16 @@ while True:
             except ValueError: 
                 print("valor invalido...")
     if menu==4:
+        system("cls")
+        print("BEM VINDO AO RELATÓRIO DO CLIENTE\n")
         if cpf_cliente in lcpf_cliente:
             index=lcpf_cliente.index(cpf_cliente)
-            print('seu cpf',lcpf_cliente[index],'\n',lrg_cliente[index],lnome_cliente[index],lfone_cliente[index],lend_cliente[index],lemail_cliente[index])
-            
+            print(' seu cpf',lcpf_cliente[index],'\n','seu rg',lrg_cliente[index],'\n','seu nome',lnome_cliente[index],'\n','seu telefone',lfone_cliente[index],'\n','seu endereço',lend_cliente[index],'\n','seu email',lemail_cliente[index])
+            system('pause')
+            system('cls')
+    if menu==0:
+            system("cls")
+            print("obrigado por utilizar o menu de cliente.")
+            system("pause")
+            system("cls")
+            break
