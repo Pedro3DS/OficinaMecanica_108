@@ -13,15 +13,15 @@ while True:
         system("cls")
         print("BEM VINDO AO CADASTRO DO CLIENTE")
         try: 
-            cpf_cliente=(input("digite seu cpf: "))
-            rg_cliente=(input("digite seu rg: "))
+            cpf_cliente=int(input("digite seu cpf: "))
+            rg_cliente=int(input("digite seu rg: "))
             nome_cliente=input("digite seu nome: ")
             fone_cliente=int(input("digite seu telefone: "))
             end_cliente=input("digite seu endereço: ")
             email_cliente=input("digite seu email: ")
         except ValueError:
             system("cls") 
-            print("valor invalido...")
+            print("valor invalido, digite numeros inteiros sem ponto, virgula etc...")
             system("pause")
             system("cls")
         else: 
@@ -61,8 +61,8 @@ while True:
        if cpf_cliente in lcpf_cliente:
             index=lcpf_cliente.index(cpf_cliente) 
             try:
-                cpf_cliente=float(input("digite seu cpf:"))
-                rg_cliente=float(input("digite seu rg: "))
+                cpf_cliente=int(input("digite seu cpf:"))
+                rg_cliente=int(input("digite seu rg: "))
                 nome_cliente=input("digite seu nome: ")
                 fone_cliente=int(input("digite seu telefone: "))
                 end_cliente=input("digite seu endereço: ")
@@ -71,7 +71,7 @@ while True:
                 system('cls')
             except ValueError: 
                 system("cls")
-                print("valor invalido...")
+                print("valor invalido, digite numeros inteiros sem ponto, virgula etc...")
                 system("pause")
                 system("cls")
             else:
