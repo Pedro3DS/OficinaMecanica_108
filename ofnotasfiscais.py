@@ -1,6 +1,6 @@
 
 def notasf():
-    total_nota = []
+    ltotal_nota = []
     menu_nota = 0
     while menu_nota != 5:
         try: 
@@ -17,32 +17,29 @@ def notasf():
                     valorLiquido_nota = valorBruto_nota-imposto
                     print (f"O valor do imposto é {imposto}")
                     print("Valor liquido: %.2f " % valorLiquido_nota)
-                    total_nota.append(n_nota)
-                    total_nota.append(descricao_nota)
-                    total_nota.append(valorBruto_nota)
-                    total_nota.append(imposto)
-                    total_nota.append(valorLiquido_nota)
+                    ltotal_nota.append(n_nota)
+                    ltotal_nota.append(descricao_nota)
+                    ltotal_nota.append(valorBruto_nota)
+                    ltotal_nota.append(imposto)
+                    ltotal_nota.append(valorLiquido_nota)
                 except:
                     print ("Favor digitar corretamente!")
             notaf2222()
         elif menu_nota == 2:
             try:  
                 print ("Apagaremos todos os dados!")
-                del (total_nota)
+                del (ltotal_nota)
             except:
                 print ("Lista vazia")
         elif menu_nota == 3:
-            total_nota = []
+            ltotal_nota = []
             print ("Por Favor refaça o seu cadastro!")
             notaf2222()
         elif menu_nota == 4:
             try:
                 print ("Aqui está o relatorio:")
-                print (total_nota)
+                for i in ltotal_nota:
+                    print (i)
+                print (ltotal_nota)
             except:
                 print("A lista está vazia, volte.")
-                return
-
-                
-            
-notasf()
